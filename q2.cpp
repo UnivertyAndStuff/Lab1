@@ -48,6 +48,32 @@ void busTicket(){
     }
 }
 
+void BMICalculator(){
+    double weight;
+    double height;
+
+    cout << "Please enter the weight and height" << endl;
+    cin >> weight;
+    cin >> height;
+
+    double BMI = weight/(height * height);
+
+    if (BMI <= 16 && BMI < 18){
+        cout << "You are seriously underweight " << endl; 
+    }else if (BMI <= 18 && BMI < 24){
+        cout << "You are underweight " << endl;
+    }else if (BMI <= 24 && BMI < 29){
+        cout << "You are normal weight" << endl;
+    }else if (BMI <= 29 && BMI < 35){
+        cout << "You are overweight" << endl;
+    }else if (BMI >= 35){
+        cout << "You are seiously overweight" << endl;
+    }else{
+        cout << "You are gravely obese" << endl;
+    }
+}
+
 int main(){
     busTicket();
+    BMICalculator();
 }
